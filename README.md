@@ -10,8 +10,12 @@ https://bezkoder.com/react-jwt-auth/
 
 ## Quick Start
 
+Get up and running with a development server using the following commands
+
+```javascript
 // Run client & development server with concurrently
 npm run dev
 
 // Assumes Node and npm are installed on machine
 // Server runs on http://localhost:8080 (set in server.js) and client on http://localhost:8081
+```
