@@ -12,7 +12,7 @@ var corsOption = {
 app.use(cors(corsOption));
 
 const db = require("./app/models");
-const Role = db.role;
+//const Role = db.role;
 
 //for production
 db.sequelize.sync();
@@ -54,12 +54,13 @@ app.use(bodyParser.urlencoded({extended:true}));
 
 //simple route
 app.get("/", (req, res)=>{
-    res.json({message: "Welcome to dashboard"})
+    res.json({message: "Welcome to server dashboard"})
 })
 
 // routes
 require('./app/routes/auth.routes')(app);
 require('./app/routes/user.routes')(app);
+require("./app/routes/turorial.routes")(app);
 
 //set port, listen for request
 const PORT = process.env.PORT || 8080;
